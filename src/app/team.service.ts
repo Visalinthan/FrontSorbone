@@ -8,10 +8,10 @@ import { Team } from './utils/team';
 })
 export class TeamService {
 
-  private baseURL = "/api/teams";
+  private baseURL = "http://localhost:9003/api/teams";
 
   constructor(private httpClient: HttpClient) { }
-  
+
   getTeamList(): Observable<Team[]>{
     return this.httpClient.get<Team[]>(`${this.baseURL}`);
   }
