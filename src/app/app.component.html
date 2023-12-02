@@ -1,31 +1,31 @@
-<h1>Gestions des Equipes</h1>
+<div class="container">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>test</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>test</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>test</td>
-        </tr>
-    </tbody>
-</table>
+    <h1>Gestions des Equipes</h1>
+
+    <div>
+        <button type="button" class="btn btn-light">Ajouter une équipe</button>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Slogan</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let team of teams; index as i; ">
+            <tr>
+                <th scope="row">{{i+1}}</th>
+                <td>{{team.name}}</td>
+                <td>{{team.slogan}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
