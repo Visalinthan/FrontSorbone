@@ -25,4 +25,10 @@ export class TeamListComponent implements OnInit {
       console.log(this.teams);
     });
   }
+  deleteTeam(id: number) {
+    this.teamService.deleteTeam(id).subscribe((data) => {
+      console.log(data);
+      this.getTeams();
+    });
+  }
 }
